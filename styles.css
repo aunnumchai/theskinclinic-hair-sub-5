@@ -3084,6 +3084,151 @@ section {
     flex-wrap: wrap;
 }
 
+/* Doctor Intro Section */
+.doctor-intro {
+    background-color: var(--bg-white);
+    padding: var(--spacing-xl) 0;
+    position: relative;
+}
+
+.doctor-info-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+}
+
+.doctor-info-heading {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--primary-color);
+    text-align: center;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.doctor-staff-video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.doctor-video-lightbox {
+    position: relative;
+    display: block;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.doctor-video-lightbox:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+.doctor-video-cover {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.doctor-video-lightbox:hover .doctor-video-cover {
+    transform: scale(1.05);
+}
+
+.doctor-video-play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: auto;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.doctor-video-lightbox:hover .doctor-video-play-icon {
+    transform: translate(-50%, -50%) scale(1.15);
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.4));
+}
+
+.doctor-info-paragraph {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--text-dark);
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Responsive adjustments for doctor-intro */
+@media (max-width: 991px) {
+    .doctor-info-heading {
+        font-size: 36px;
+    }
+    
+    .doctor-staff-video-grid {
+        gap: 20px;
+    }
+    
+    .doctor-video-play-icon {
+        width: 70px;
+    }
+}
+
+@media (max-width: 767px) {
+    .doctor-intro {
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .doctor-info-flex {
+        gap: 30px;
+    }
+    
+    .doctor-info-heading {
+        font-size: 28px;
+        padding: 0 15px;
+    }
+    
+    .doctor-staff-video-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 15px;
+    }
+    
+    .doctor-video-play-icon {
+        width: 60px;
+    }
+    
+    .doctor-info-paragraph {
+        font-size: 16px;
+        line-height: 1.7;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 479px) {
+    .doctor-info-heading {
+        font-size: 24px;
+    }
+    
+    .doctor-video-play-icon {
+        width: 50px;
+    }
+    
+    .doctor-info-paragraph {
+        font-size: 15px;
+    }
+}
+
 /* Doctors Section */
 .doctors-section {
     background-color: var(--bg-white);
@@ -3224,7 +3369,7 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('images/world-map-over_1.png');
+    background-image: url('images/world-map-over_1.webp');
     background-size: contain;
     background-position: center;
     opacity: 1;
@@ -4883,28 +5028,339 @@ section {
     line-height: 1.8;
 }
 
+/* ============================================
+   DOCTOR PROFILE SECTION
+   ============================================ */
+
 .doctor-profile {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: var(--spacing-xl);
-    margin-top: var(--spacing-lg);
+    padding: 80px 0;
+    background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
 }
 
-.doctor-profile-image img {
-    border-radius: var(--border-radius);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+.doctor-profile-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
 }
 
-.doctor-profile-info h2 {
+.doctor-profile-heading {
+    font-size: 42px;
+    font-weight: 700;
     color: var(--primary-color);
-    margin-bottom: var(--spacing-sm);
+    text-align: center;
+    margin-bottom: 60px;
+    font-family: var(--font-primary);
 }
 
-.doctor-profile-info h3 {
-    color: var(--text-light);
+/* Doctor Profile Grid - Top Section */
+.doctor-profile-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid-banner {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
+}
+
+/* Doctor Info Section */
+.doctor-profile-info-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.doctor-name-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.doctor-profile-info-name {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0;
+    font-family: var(--font-primary);
+    line-height: 1.3;
+}
+
+.doctor-profile-english-name {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2e2f92;
+    margin: 0;
+    font-family: var(--font-secondary);
+}
+
+.doctor-uni-name-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.doctor-university-name {
     font-size: 18px;
+    font-weight: 500;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.doctor-university-name.english {
+    font-size: 16px;
     font-weight: 400;
-    margin-bottom: var(--spacing-lg);
+    color: #666;
+    font-style: italic;
+}
+
+.doctor-profile-line {
+    height: 4px;
+    background: linear-gradient(to right, var(--primary-color), var(--text-light));
+    margin-top: 20px;
+    border-radius: 2px;
+}
+
+/* Education Section */
+.doctor-education-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.doctor-education-heading {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    padding: 15px 60px;
+    background: linear-gradient(to right, #0000CC, #000066);
+    border-radius: 50px;
+    font-family: var(--font-primary);
+    display: inline-block;
+    font-style: italic;
+    position: relative;
+    z-index: 2;
+    margin-bottom: -30px;
+}
+
+.doctor-education-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    background: #e6f3ff;
+    padding: 50px;
+    padding-top: 70px;
+    border-radius: 15px;
+    width: 100%;
+}
+
+.doctor-education-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.doctor-education-list li {
+    position: relative;
+    padding-left: 30px;
+    line-height: 1.8;
+}
+
+.doctor-education-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.doctor-education-list li > div:first-child {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary-color);
+    line-height: 1.6;
+}
+
+.education-english-detail {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+/* Certificate Grid */
+.doctor-certificate-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.doctor-certificate-lightbox {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.doctor-certificate-lightbox:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.doctor-certificate-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.doctor-certificate-lightbox:hover .doctor-certificate-image {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .doctor-certificate-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+}
+
+@media (max-width: 992px) {
+    .doctor-profile-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .doctor-education-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 40px 30px;
+    }
+    
+    .doctor-profile-heading {
+        font-size: 36px;
+    }
+    
+    .doctor-education-heading {
+        font-size: 24px;
+        padding: 12px 40px;
+        margin-bottom: -20px;
+    }
+    
+    .doctor-profile-info-name {
+        font-size: 32px;
+    }
+    
+    .doctor-certificate-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .doctor-profile {
+        padding: 60px 0;
+    }
+    
+    .doctor-profile-flex {
+        gap: 40px;
+    }
+    
+    .doctor-profile-heading {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+    
+    .doctor-education-grid {
+        padding: 30px 20px;
+    }
+    
+    .doctor-education-heading {
+        font-size: 22px;
+        padding: 12px 35px;
+        margin-bottom: -20px;
+    }
+    
+    .doctor-profile-info-name {
+        font-size: 28px;
+    }
+    
+    .doctor-profile-english-name {
+        font-size: 20px;
+    }
+    
+    .doctor-university-name {
+        font-size: 16px;
+    }
+    
+    .doctor-education-list li > div:first-child {
+        font-size: 15px;
+    }
+    
+    .education-english-detail {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 576px) {
+    .doctor-profile {
+        padding: 40px 0;
+    }
+    
+    .doctor-education-flex {
+        padding: 30px 15px;
+    }
+    
+    .doctor-education-grid {
+        padding: 20px 15px;
+        gap: 30px;
+    }
+    
+    .doctor-profile-heading {
+        font-size: 28px;
+    }
+    
+    .doctor-education-heading {
+        font-size: 20px;
+        padding: 10px 30px;
+        margin-bottom: -20px;
+    }
+    
+    .doctor-certificate-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .doctor-education-list {
+        gap: 20px;
+    }
 }
 
 .credentials,
@@ -7025,5 +7481,51 @@ section {
     
     .yt-full-logo {
         height: 20px;
+    }
+}
+
+.doctor-intro-text .doctor-intro-heading {
+    text-align: center;
+    color: var(--primary-color);
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    font-size: var(--font-size-h2);
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    font-style: italic;
+}
+
+.doctor-intro-text .doctor-intro-detail {
+    text-align: center;
+    margin: 0 auto var(--spacing-lg);
+    font-size: 18px;
+    font-style: italic;
+}
+
+.flash-highlight {
+    animation: flash-glow 1.2s infinite alternate;
+    color: #fff !important;
+    /* background: linear-gradient(90deg, #ffb300 30%, #ffe066 70%); */
+    padding: 0.2em 0.7em;
+    border-radius: 1em;
+    font-weight: bold;
+    box-shadow: 0 0 10px 2px #ffe06699;
+    transition: box-shadow 0.2s;
+    text-shadow: 0 2px 8px #ffb30088;
+}
+
+@keyframes flash-glow {
+    0% {
+        box-shadow: 0 0 10px 2px #66ccff99, 0 0 0px 0px #0099ff00;
+        filter: brightness(1.1);
+    }
+    60% {
+        box-shadow: 0 0 20px 8px #66ccffcc, 0 0 0px 0px #0099ff00;
+        filter: brightness(1.25);
+    }
+    100% {
+        box-shadow: 0 0 10px 2px #66ccff99, 0 0 20px 8px #0099ff44;
+        filter: brightness(1.1);
     }
 }

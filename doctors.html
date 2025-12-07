@@ -3,7 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doctor Team - The Skin Clinic Hair Transplant</title>
+    <title>The Skin Clinic - Hair Transplant Hospital | คลินิกปลูกผม</title>
+    <meta name="description" content="Dr.Top Hair Hospital by The Skin Clinic - คลินิกปลูกผมถาวร ปลูกผม FUE Long Hair FUI ไร้รอยแผลเป็น โดยทีมแพทย์อเมริกันบอร์ด ABHRS">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="The Skin Clinic - Hair Transplant Hospital | คลินิกปลูกผม">
+    <meta property="og:description" content="Dr.Top Hair Hospital by The Skin Clinic - คลินิกปลูกผมถาวร ปลูกผม FUE Long Hair FUI ไร้รอยแผลเป็น โดยทีมแพทย์อเมริกันบอร์ด ABHRS">
+    <meta property="og:image" content="https://drtop-hair.com/images/banner/Banner-1.webp">
+    <meta property="og:url" content="https://drtop-hair.com">
+    <meta property="og:type" content="website">
 
     <!-- Meta Pixel Code -->
     <script>
@@ -24,16 +32,30 @@
     <!-- End Meta Pixel Code -->
     
     <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- Aidaform Widget -->
+    <script type="text/javascript">
+        (function(){
+            var r,d=document,gt=d.getElementById,cr=d.createElement,tg=d.getElementsByTagName,id="aidaform-app";
+            if(!gt.call(d,id)){
+                r=cr.call(d,"script");
+                r.id=id;
+                r.src="https://widget.aidaform.com/embed.js";
+                (d.head || tg.call(d,"head")[0]).appendChild(r);
+            }
+        })();
+    </script>
 </head>
 <body>
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-wrapper">
                 <div class="logo">
-                    <a href="index.html">
-                        <h1>THE SKIN CLINIC</h1>
-                        <p class="logo-subtitle">Dr.Top Hair Hospital</p>
-                    </a>
+                    <img src="images/logo หมอท็อปปลูกผม.webp" alt="The Skin Clinic - Dr.Top Hair Hospital">
                 </div>
                 
                 <button class="mobile-menu-toggle" aria-label="Toggle menu">
@@ -43,53 +65,262 @@
                 </button>
                 
                 <ul class="nav-menu">
-                    <li><a href="index.html#home">หน้าแรก</a></li>
-                    <li><a href="services.html">บริการของเรา</a></li>
-                    <li><a href="doctors.html" class="active">ทีมแพทย์</a></li>
-                    <li><a href="index.html#why-us">ทำไมต้องเลือกเรา</a></li>
-                    <li><a href="index.html#faq">คำถามที่พบบ่อย</a></li>
-                    <li><a href="blog.html">บทความ</a></li>
-                    <li><a href="index.html#contact">ติดต่อเรา</a></li>
+                    <li><a href="https://drtop-hair.com">หน้าแรก</a></li>
+                    <li><a href="index.html#doctors">ทีมแพทย์</a></li>
+                    <li><a href="index.html#long-hair-compare" class="flash-highlight">เช็กลิสต์สำคัญ</a></li>
+                    <li><a href="index.html#clinic-services">เทคนิคปลูกผม</a></li>
+                    <li><a href="index.html#home-review">รีวิว</a></li>
+                    <li><a href="index.html#contact-form">ติดต่อเรา</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <section class="page-header">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <!-- Hero Slider -->
+        <div class="hero-slider">
+            <div class="hero-slide active">
+                <img src="images/banner/Banner All.webp" alt="Hair Transplant Banner 1">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Doctor Intro Text Section -->
+    <section class="doctor-intro-text">
+        <div class="w-layout-blockcontainer standard-container w-container">
+            <div class="w-layout-vflex doctor-intro-flex">
+                <div class="doctor-intro-text-block">
+                    <h1 class="doctor-intro-heading">สัมผัสประสบการณ์การปลูกผมระดับสากล ดูแลโดยทีมแพทย์ปลูกผม American Board (ABHRS) ที่ได้รับการยอมรับในระดับสากล</h1>
+                    <p class="doctor-intro-detail">การันตีด้วยรางวัล และได้รับการเชิญเป็น World-renowned speaker บนเวทีโลกอย่างต่อเนื่อง อาทิเช่น ตุรกี ฝรั่งเศส โมนาโก สิงค์โปร ญี่ปุ่น อเมริกาตอกย้ำคุณภาพแพทย์ปลูกผมไทย ด้วยประสบการณ์อันยาวนานมากกว่า 20 ปี รักษาคนไข้มามากกว่า 10,000 เคส การวางแผนการรักษาแบบบูรณาการ เพื่อผลลัพธ์การปลูกผมที่ดูเป็นธรรมชาติ และให้ผลลัพธ์ที่ดีที่สุด</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Doctor Intro Section -->
+    <section class="doctor-intro">
+        <div class="w-layout-blockcontainer standard-container w-container">
+        <div class="w-layout-vflex doctor-info-flex">
+            <h2 class="page-header-text">ทำไมต้องปลูกผมที่ The Skin Clinic ?</h2>
+            <div class="w-layout-grid doctor-staff-video-grid">
+            <a href="https://www.youtube.com/watch?v=GKiujt_xhV0&t=2s" target="_blank" class="doctor-video-lightbox w-inline-block w-lightbox" aria-label="open lightbox" aria-haspopup="dialog">
+                <img src="images/doctor-video-cover-3.webp" loading="lazy" alt="Hair Transplant, ศัลยกรรมปลูกผม" class="doctor-video-cover">
+                <img src="images/icon/yt_icon_rgb.png" loading="lazy" alt="" class="doctor-video-play-icon">
+            </a>
+            <a href="https://www.youtube.com/watch?v=kumDWZz94bw" target="_blank" class="doctor-video-lightbox w-inline-block w-lightbox" aria-label="open lightbox" aria-haspopup="dialog">
+                <img src="images/doctor-video-cover-4.webp" loading="lazy" alt="FUE Hair Transplant, ปลูกผมที่ไหนดี" class="doctor-video-cover">
+                <img src="images/icon/yt_icon_rgb.png" loading="lazy" alt="" class="doctor-video-play-icon">
+            </a>
+            </div>
+            <p class="doctor-info-paragraph">Dr. Top Hair Hospital by The Skin Clinic คือคลินิกปลูกผมชั้นนำที่ได้รับความไว้วางใจจากคนไข้ทั้งในประเทศและต่างประเทศ การันตีคุณภาพด้วย Certified มาตรฐานระดับโลก ทีมแพทย์ของเรามุ่งมั่นพัฒนาเทคนิคและความรู้ในด้านการปลูกผมอย่างต่อเนื่องได้รับการอบรมทั้งในยุโรปและเอเชีย เพื่อให้มั่นใจว่าทุกการรักษาเป็นไปตามมาตรฐานสากล</p>
+        </div>
+        </div>
+    </section>
+    
+    <!-- Doctors Section -->
+    <section id="doctors" class="doctors-section">
         <div class="container">
-            <h1>ทีมแพทย์ปลูกผม</h1>
-            <p>World-Class Doctors ที่ได้รับการยอมรับระดับสากล</p>
+            <h2 class="section-title">แพทย์ปลูกผม</h2>
+            <h3 class="section-subtitle">World-Class Doctor</h3>
+            <p class="section-description">
+                การันตีคุณภาพของทีมแพทย์ปลูกผมของเราได้เกียรติรับเชิญเป็น Speaker 
+                และได้รับรางวัลด้านการปลูกผมจากหลายประเทศทั่วโลกอย่างต่อเนื่อง 
+                อาทิเช่น ตุรกี ฝรั่งเศส โมนาโก สิงคโปร์ ญี่ปุ่น อเมริกา
+            </p>
+
+
+            
+            <!-- Speaker Detail Grid -->
+            <div class="speaker-detail-grid">
+                <div class="speaker-detail-main-flex">
+                    <a href="https://youtu.be/kumDWZz94bw" target="_blank" class="speaker-video-link">
+                        <div class="speaker-country-block">
+                            <img loading="lazy" src="images/icon/USA_icon.png" alt="USA Flag" class="speaker-country-icon">
+                            <p>Diplomate of the American Board of Hair Restoration Surgery (ABHRS) วุฒิบัตรผู้เชี่ยวชาญด้านศัลยศาสตร์การปลูกถ่ายเซลล์รากผม ประเทศสหรัฐอเมริกา</p>
+                        </div>
+                    </a>
+                    <a href="https://youtube.com/@theskinclinics" target="_blank" class="speaker-video-link">
+                        <div class="speaker-country-block">
+                            <img loading="lazy" src="images/icon/Japan_icon.png" alt="Japan Flag" class="speaker-country-icon">
+                            <p>ได้รับเกียรติ เป็นวิทยากร ในงานประชุมสมาคม ศัลยกรรมความงาม ณ กรุงโตเกียว ประเทศญี่ปุ่น</p>
+                        </div>
+                    </a>
+                    <a href="https://youtu.be/AC9gYXOZalU" target="_blank" class="speaker-video-link">
+                        <div class="speaker-country-block">
+                            <img loading="lazy" src="images/icon/spain-flag-circle.png" alt="Spain Flag" class="speaker-country-icon">
+                            <p>ได้รับเชิญเป็นวิทยากรแพทย์ปลูกผมไทย ในงาน FUE EUROPE 2025 - 13th Annual Meeting ที่กรุงมาดริด ประเทศสเปน</p>
+                        </div>
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=NRdeYyOxNuk&amp;feature=youtu.be" target="_blank" class="speaker-video-link">
+                        <div class="speaker-country-block">
+                            <img loading="lazy" src="images/icon/Monaco_icon.png" alt="Monaco Flag" class="speaker-country-icon">
+                            <p>แพทย์ปลูกผมไทยที่ได้รับการเผยแพร่ผลงานวิจัยในงานประชุมศัลยกรรมความงามระดับโลก Anti-Aging Medicine World Congress (AMWC) 2024</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <img loading="lazy" alt="นพ. ณัทธร นฤปเวศม์ (หมอท๊อป) | THE SKIN CLINIC" src="images/drtop_retouch_2_cut_1drtop_retouch_2_cut.webp" class="speaker-cover">
+                
+                <div class="speaker-detail-main-flex">
+                    <a href="https://www.youtube.com/watch?v=7kGIHmCL3p4" target="_blank" class="speaker-video-link">
+                        <div class="speaker-country-block right-side new-addition">
+                            <div class="icon-container">
+                                <img loading="lazy" src="images/icon/Monaco_icon.png" alt="Monaco Flag" class="speaker-country-icon">
+                                <img loading="lazy" src="images/icon/trophy-icon.png" alt="Trophy" class="new-addition-icon">
+                            </div>
+                            <p class="speaker-smaller-text"><span class="award-highlight">ได้รับรางวัลชนะเลิศ BEST HAIR RESTORATION งานประชุมระดับนานาชาติ Aesthetic &amp; Anti-Aging Medicine World Congress (AMWC 2025) ณ ราชรัฐโมนาโก</span></p>
+                        </div>
+                    </a>
+                    <a href="https://youtu.be/HSKxmxbdL8A" target="_blank" class="speaker-video-link">
+                        <div class="speaker-country-block right-side">
+                            <img loading="lazy" src="images/icon/USA_icon.png" alt="USA Flag" class="speaker-country-icon">
+                            <p class="speaker-smaller-text">FACULTY INTERNATIONAL SPEAKER แพทย์ปลูกผมไทยที่ได้เกียรติรับเชิญบรรยายและได้รับการคัดเลือกแสดงผลงานในงานประชุมระดับนานาชาติ Denver 2024 : 32nd Annual ISHRS World Congress <span class="inline-break-span">ณ เมืองเดนเวอร์</span> ประเทศสหรัฐอเมริกา</p>
+                        </div>
+                    </a>
+                    <a href="https://youtu.be/u8VQ22TK7kk" target="_blank" class="speaker-video-link">
+                        <div class="speaker-country-block right-side">
+                            <img loading="lazy" src="images/icon/France_icon.png" alt="France Flag" class="speaker-country-icon">
+                            <p class="speaker-smaller-text">ได้รับเกียรติเป็นวิทยากรจากสาขาการปลูกถ่ายย้ายเซลล์รากผมแพทย์คนไทยเพียงท่านเดียว ในงานประชุมวิชาการด้านผิวหนังและความงามระดับนานาชาติใหญ่ระดับโลก IMCAS World Congress 2024 : Aesthetic Surgery &amp; Cosmetic Dermatology <span class="inline-break-span">ณ ประเทศฝรั่งเศส</span></p>
+                        </div>
+                    </a>
+                    <a href="https://youtu.be/T-LmBN-3m0Q" target="_blank" class="speaker-video-link">
+                        <div class="speaker-country-block right-side">
+                            <img loading="lazy" src="images/icon/Turkey_icon.png" alt="Turkey Flag" class="speaker-country-icon">
+                            <p class="speaker-smaller-text">ได้รับเกียรติเป็นวิทยากร แพทย์ปลูกผมไทยเพียงคนเดียวที่ได้รับเชิญเป็น Speaker ในงาน Fullface 2024 ที่รวมสุดยอดแพทย์ผู้เชี่ยวชาญด้านการปลูกผมและความงามระดับโลกที่ประเทศตุรกี</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="speaker-country-block center-alone">
+                    <div class="country-flag-block">
+                        <img loading="lazy" src="images/icon/Monaco_icon.png" alt="Monaco Flag" class="speaker-country-icon">
+                        <img loading="lazy" src="images/icon/trophy-icon.png" alt="Trophy" class="new-addition-icon">
+                    </div>
+                    <p class="speaker-smaller-text max-w"><span class="award-highlight">ได้รับรางวัลชนะเลิศ BEST HAIR RESTORATION งานประชุมระดับนานาชาติ Aesthetic &amp; Anti-Aging Medicine World Congress (AMWC 2025) ณ ราชรัฐโมนาโก</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- Doctor Profile Section -->
+    <section class="doctor-profile">
+        <div class="w-layout-blockcontainer standard-container w-container">
+            <div class="w-layout-vflex doctor-profile-flex">
+                <h2 class="doctor-profile-heading">ประวัติแพทย์</h2>
+                <div class="w-layout-grid doctor-profile-grid"><img src="images/doctor_profile_banner_1.webp" loading="lazy" class="grid-banner">
+                    <div class="w-layout-vflex doctor-profile-info-flex">
+                        <div class="w-layout-vflex doctor-name-flex">
+                        <h2 class="doctor-profile-info-name">นพ. ณัทธร <span class="inline-break-span">นฤปเวศม์</span></h2>
+                        <h3 class="doctor-profile-english-name">Dr. Nuttorn Narupaves</h3>
+                        </div>
+                        <div class="w-layout-vflex doctor-uni-name-flex">
+                            <div class="doctor-university-name">แพทย์ศาสตร์บัณฑิตมหาวิทยาลัยมหิดล <span class="inline-break-span">(โรงพยาบาลรามาธิบดี)</span></div>
+                            <div class="doctor-university-name english">Mahidol University <span class="inline-break-span">(Ramathibodi Hospital)</span></div>
+                        </div>
+                        <div class="doctor-profile-line"></div>
+                    </div>
+                </div>
+                <div class="w-layout-vflex doctor-education-flex">
+                    <h2 class="doctor-education-heading">Education <span class="inline-break-span">and Training</span></h2>
+                    <div class="w-layout-grid doctor-education-grid">
+                        <ul role="list" class="doctor-education-list">
+                            <li>
+                                <div>วุฒิบัตรด้านศัลยศาสตร์การปลูกถ่ายเซลล์รากผม <span class="inline-break-span">ประเทศสหรัฐอเมริกา</span></div>
+                                <div class="education-english-detail">Diplomate of the American Board of Hair Restoration Surgery (ABHRS)</div>
+                            </li>
+                            <li>
+                                <div>ประกาศนียบัตรด้านผิวหนัง มหาวิทยาลัยเวลส์ สหราชอาณาจักร</div>
+                                <div class="education-english-detail">Diploma In Dermatology. The University of Wales. United Kingdom</div>
+                            </li>
+                            <li>
+                                <div>วุฒิบัตรด้านความงาม จาก American Academy of Aesthetic Medicine</div>
+                                <div class="education-english-detail">Board Certified in Aesthetic Medicine, American Academy of Aesthetic Medicine</div>
+                            </li>
+                            <li>
+                                <div>ประกาศนียบัตรด้านศัลยศาสตร์การปลูกย้ายเซลล์รากผม มหาวิทยาลัยเซ็นต์หลุยส์ สหรัฐอเมริกา</div>
+                                <div class="education-english-detail">Certificate in Hair Transplant, Saint Louis University School of Medicine, USA.</div>
+                            </li>
+                            </ul>
+                            <ul role="list" class="doctor-education-list">
+                            <li>
+                                <div>ประกาศนียบัตรด้านการปลูกย้ายเซลล์รากผม จาก London Hair Restoration Training Academy</div>
+                                <div class="education-english-detail">Certificate in Hair Restoration FUE Method, London Hair Restoration Training Academy, UK</div>
+                            </li>
+                            <li>
+                                <div>จบหลักสูตรศัลยกรรมปลูกย้ายรากผม วิทยาลัยศัลยกรรมความงามสาธารณรัฐเกาหลี</div>
+                                <div class="education-english-detail">Fellowship in Hair Restoration Surgery, Korean College of Cosmetic Surgery</div>
+                            </li>
+                            <li>
+                                <div>ประกาศนียบัตรด้านศัลยกรรมความงาม วิทยาลัยศัลยกรรมความงามสาธารณรัฐเกาหลี</div>
+                                <div class="education-english-detail">Diploma of Cosmetic Surgery, Korean College of Cosmetic Surgery</div>
+                            </li>
+                            <li>
+                                <div>เป็นสมาชิกสมาคมศัลยกรรมปลูกผมนานาชาติ (ISHRS)</div>
+                                <div class="education-english-detail">Associate Member of the International Society of Hair Restoration Surgery</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-layout-grid doctor-certificate-grid">
+                    <a href="#" class="doctor-certificate-lightbox w-inline-block"><img src="images/certificate/certificate-1.webp" loading="lazy" alt="ปลูกผมที่ไหนดี, Hair Transplant" class="doctor-certificate-image"></a>
+                    <a href="#" class="doctor-certificate-lightbox w-inline-block"><img src="images/certificate/certificate-2.webp" loading="lazy" alt="คลินิกปลูกผม, ปลูกผม FUE" class="doctor-certificate-image"></a>
+                    <a href="#" class="doctor-certificate-lightbox w-inline-block"><img src="images/certificate/certificate-3.webp" loading="lazy" alt="ปลูกผมที่ไหนดี, FUE Hair Transplant" class="doctor-certificate-image"></a>
+                    <a href="#" class="doctor-certificate-lightbox w-inline-block"><img src="images/certificate/certificate-4.webp" loading="lazy" alt="ศัลยกรรมปลูกผม, รักษาผมบาง " class="doctor-certificate-image"></a>
+                    <a href="#" class="doctor-certificate-lightbox w-inline-block"><img src="images/certificate/certificate-5.webp" loading="lazy" alt="FUE Hair Transplant, Hair Transplant" class="doctor-certificate-image"></a>
+                    <a href="#" class="doctor-certificate-lightbox w-inline-block"><img src="images/certificate/certificate-6.webp" loading="lazy" alt="ศัลยกรรมปลูกผม, FUE Hair Transplant" class="doctor-certificate-image"></a>
+                    <a href="#" class="doctor-certificate-lightbox w-inline-block"><img src="images/certificate/certificate-7.webp" loading="lazy" alt="ปลูกผมที่ไหนดี, ศัลยกรรมปลูกผม" class="doctor-certificate-image"></a>
+                    <a href="#" class="doctor-certificate-lightbox w-inline-block"><img src="images/certificate/certificate-8.webp" loading="lazy" alt="ราคา ปลูกผม, ศัลยกรรมปลูกผม" class="doctor-certificate-image"></a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="doctors-full">
-        <div class="container">
-            <div class="doctor-profile">
-                <div class="doctor-profile-image">
-                    <img src="https://via.placeholder.com/400x500/2C5282/FFFFFF?text=Dr.Top" alt="นพ. ณัทธร นฤปเวศม์">
-                </div>
-                <div class="doctor-profile-info">
-                    <h2>นพ. ณัทธร นฤปเวศม์ (หมอท๊อป)</h2>
-                    <h3>แพทย์ศาสตร์บัณฑิต มหาวิทยาลัยมหิดล (โรงพยาบาลรามาธิบดี)</h3>
-                    
-                    <div class="credentials">
-                        <h4>คุณวุฒิและความเชี่ยวชาญ:</h4>
-                        <ul>
-                            <li>Diplomate of the American Board of Hair Restoration Surgery (ABHRS)</li>
-                            <li>ประสบการณ์การปลูกผมมากกว่า 20 ปี</li>
-                            <li>International Speaker ในงานประชุมระดับโลก</li>
-                            <li>ได้รับรางวัล BEST HAIR RESTORATION จาก AMWC 2025</li>
-                        </ul>
+    <section class="doctor-profile">
+        <div class="w-layout-blockcontainer standard-container w-container">
+            <div class="w-layout-vflex doctor-profile-flex">
+                <div class="w-layout-grid doctor-profile-grid"><img src="images/doctor_profile_banner_2.webp" loading="lazy" class="grid-banner">
+                    <div class="w-layout-vflex doctor-profile-info-flex">
+                        <div class="w-layout-vflex doctor-name-flex">
+                        <h2 class="doctor-profile-info-name">พญ. วรพรรณ <span class="inline-break-span">โมกขะสมิต</span></h2>
+                        <h3 class="doctor-profile-english-name">Dr. Warapan Mokkasmit</h3>
+                        </div>
+                        <div class="w-layout-vflex doctor-uni-name-flex">
+                            <div class="doctor-university-name">แพทย์ศาสตร์บัณฑิตมหาวิทยาลัยมหิดล <span class="inline-break-span">(โรงพยาบาลรามาธิบดี)</span></div>
+                            <div class="doctor-university-name english">Mahidol University <span class="inline-break-span">(Ramathibodi Hospital)</span></div>
+                        </div>
+                        <div class="doctor-profile-line"></div>
                     </div>
-                    
-                    <div class="achievements">
-                        <h4>รางวัลและเกียรติยศ:</h4>
-                        <ul>
-                            <li>🏆 ได้รับเกียรติเป็นวิทยากรในงาน FUE EUROPE 2025 - มาดริด ประเทศสเปน</li>
-                            <li>🏆 ได้รับเผยแพร่ผลงานวิจัยในงาน AMWC 2024 - โมนาโก</li>
-                            <li>🏆 International Speaker ในงาน ISHRS Denver 2024 - สหรัฐอเมริกา</li>
-                            <li>🏆 วิทยากรในงาน IMCAS World Congress 2024 - ฝรั่งเศส</li>
-                            <li>🏆 Speaker ในงาน Fullface 2024 - ตุรกี</li>
+                </div>
+                <div class="w-layout-vflex doctor-education-flex">
+                    <h2 class="doctor-education-heading">Education <span class="inline-break-span">and Training</span></h2>
+                    <div class="w-layout-grid doctor-education-grid">
+                        <ul role="list" class="doctor-education-list">
+                            <li>
+                                <div>Doctor of Medicine Mahidol University <span class="inline-break-span">(Ramathibodi Hospital)</span></div>
+                            </li>
+                            <li>
+                                <div>วุฒิบัตรด้านความงาม จาก American Academy of Aesthetic Medicine</div>
+                                <div class="education-english-detail">Board certified in Aesthetic Medicine (American Academy of Aesthetic Medicine)</div>
+                            </li>
+                            <li>
+                                <div>ประกาศนียบัตรด้านตจวิทยา (ด้านผิวหนัง)</div>
+                                <div class="education-english-detail">Diploma in Dermatology (JICA, JAPAN)</div>
+                            </li>
+                            </ul>
+                            <ul role="list" class="doctor-education-list">
+                            <li>
+                                <div>ประกาศนียบัตรด้านศัลยกรรมผิวหนังด้วยเลเซอร์ <span class="inline-break-span">สถาบันโรคผิวหนัง</span></div>
+                                <div class="education-english-detail">Fellowship in cutaneous and laser surgery (Skin Institute)</div>
+                            </li>
+                            <li>
+                                <div>Clinical fellowship in cosmetic surgery (Korean College of Cosmetic Surgery, KCCS)</div>
+                            </li>
+                            <li>
+                                <div>ประกาศนียบัตรด้านการปลูกย้ายเซลล์รากผม สมาคมศัลยกรรมปลูกผมนานาชาติ</div>
+                                <div class="education-english-detail">Certificated in Hair Transplants Surgery (ISHRS)</div>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -97,22 +328,260 @@
         </div>
     </section>
 
+    <section class="doctor-profile">
+        <div class="w-layout-blockcontainer standard-container w-container">
+            <div class="w-layout-vflex doctor-profile-flex">
+                <div class="w-layout-grid doctor-profile-grid"><img src="images/doctor_profile_banner_3.webp" loading="lazy" class="grid-banner">
+                    <div class="w-layout-vflex doctor-profile-info-flex">
+                        <div class="w-layout-vflex doctor-name-flex">
+                        <h2 class="doctor-profile-info-name">นพ. มโนธรรม <span class="inline-break-span">อุสาโห</span></h2>
+                        <h3 class="doctor-profile-english-name">Dr. Manotham Usaho</h3>
+                        </div>
+                        <div class="w-layout-vflex doctor-uni-name-flex">
+                            <div class="doctor-university-name">แพทย์ศาสตร์บัณฑิต<span class="inline-break-span">จุฬาลงกรณ์มหาวิทยาลัย</span></div>
+                            <div class="doctor-university-name english">Chulalongkorn University</div>
+                        </div>
+                        <div class="doctor-profile-line"></div>
+                    </div>
+                </div>
+                <div class="w-layout-vflex doctor-education-flex">
+                    <h2 class="dcotor-education-heading">Education <span class="inline-break-span">and Training</span></h2>
+                    <div class="w-layout-grid doctor-education-grid">
+                    <ul role="list" class="doctor-education-list">
+                        <li>
+                            <div>แพทย์ศาสตร์บัณฑิตจุฬาลงกรณ์มหาวิทยาลัย</div>
+                            <div class="education-english-detail">Doctor of Medicine, Chulalongkorn University</div>
+                        </li>
+                        <li>
+                            <div>Certificate in Anti aging medicine (Paris, France)</div>
+                        </li>
+                        <li>
+                            <div>วิทยาศาสตร์มหาบัณฑิต สาขาตจวิทยา (ด้านผิวหนัง) มหาวิทยาลัยมหิดล</div>
+                            <div class="education-english-detail">Master in dermatolog (Mahidol University)</div>
+                        </li>
+                    </ul>
+                    <ul role="list" class="doctor-education-list">
+                        <li>
+                            <div>จบหลักสูตรด้านศัลยศาสตร์ตจวิทยา (ด้านผิวหนัง) มหาวิทยาลัยมหิดล</div>
+                            <div class="education-english-detail">Fellow in dermatosurgery (Ramathibodi Hospital)</div>
+                        </li>
+                        <li>
+                            <div>Board certified in family medicine</div>
+                        </li>
+                        <li>
+                            <div>ประกาศนียบัตรด้านการปลูกย้ายเซลล์รากผม สมาคมศัลยกรรมปลูกผมนานาชาติ</div>
+                            <div class="education-english-detail">Certificated in Hair Transplants Surgery (ISHRS)</div>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="doctor-profile">
+        <div class="w-layout-blockcontainer standard-container w-container">
+            <div class="w-layout-vflex doctor-profile-flex">
+                <div class="w-layout-grid doctor-profile-grid"><img src="images/doctor_profile_banner_4.webp" loading="lazy" class="grid-banner">
+                    <div class="w-layout-vflex doctor-profile-info-flex">
+                        <div class="w-layout-vflex doctor-name-flex">
+                            <h2 class="doctor-profile-info-name">นพ. โสภณ <span class="inline-break-span">เอี่ยมศิรินุกูล</span></h2>
+                            <h3 class="doctor-profile-english-name">Dr. Sopon Iamsirinukool</h3>
+                        </div>
+                        <div class="w-layout-vflex doctor-uni-name-flex">
+                            <div class="doctor-university-name">แพทย์ศาสตร์บัณฑิตมหาวิทยาลัยธรรมศาสตร์ </div>
+                            <div class="doctor-university-name english">Thammasat University</div>
+                        </div>
+                        <div class="doctor-profile-line"></div>
+                    </div>
+                </div>
+                <div class="w-layout-vflex doctor-education-flex">
+                    <h2 class="dcotor-education-heading">Education <span class="inline-break-span">and Training</span></h2>
+                    <div class="w-layout-grid doctor-education-grid">
+                    <ul role="list" class="doctor-education-list">
+                        <li>
+                            <div>แพทย์ศาสตร์บัณทิต มหาวิทยาลัยธรรมศาสตร์</div>
+                            <div class="education-english-detail">Doctor of Medicine. Thammasat University</div>
+                        </li>
+                        <li>
+                            <div>วุฒิบัตรด้านความงาม จาก American Academy of Aesthetic Medicine</div>
+                            <div class="education-english-detail">Master in dermatolog (Mahidol University)</div>
+                        </li>
+                    </ul>
+                    <ul role="list" class="doctor-education-list">
+                        <li>
+                            <div>ประกาศนียบัตรด้านตจวิทยา (ด้านผิวหนัง)</div>
+                            <div class="education-english-detail">Diploma in Dermatology (JICA, JAPAN)</div>
+                        </li>
+                        <li>
+                            <div>ประกาศนียบัตรด้านศัลยกรรมผิวหนังด้วยเลเซอร์ <span class="inline-break-span">สถาบันโรคผิวหนัง</span></div>
+                            <div class="education-english-detail">Fellowship in cutaneous and laser surgery (สถาบันโรคผิวหนัง)</div>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="doctor-profile">
+        <div class="w-layout-blockcontainer standard-container w-container">
+            <div class="w-layout-vflex doctor-profile-flex">
+                <div class="w-layout-grid doctor-profile-grid"><img src="images/doctor_profile_banner_5.webp" loading="lazy" class="grid-banner">
+                    <div class="w-layout-vflex doctor-profile-info-flex">
+                        <div class="w-layout-vflex doctor-name-flex">
+                            <h2 class="doctor-profile-info-name">พญ. ภัสส์ศา <span class="inline-break-span">คงสุทธิ์</span></h2>
+                            <h3 class="doctor-profile-english-name">Dr. Phata Khongsuth</h3>
+                        </div>
+                        <div class="w-layout-vflex doctor-uni-name-flex">
+                            <div class="doctor-university-name">แพทย์ศาสตร์บัณฑิต<span class="inline-break-span">มหาวิทยาลัยรังสิต</span></div>
+                            <div class="doctor-university-name english">Rangsit University</div>
+                        </div>
+                        <div class="doctor-profile-line"></div>
+                    </div>
+                </div>
+                <div class="w-layout-vflex doctor-education-flex">
+                    <h2 class="dcotor-education-heading">Education and Training</h2>
+                    <div class="w-layout-grid doctor-education-grid">
+                        <ul role="list" class="doctor-education-list">
+                            <li>
+                                <div>Certificate in aesthetic medicine, American Academy of Aesthetic Medicine</div>
+                            </li>
+                            <li>
+                                <div>Certificate of intensive course on Aesthetic Dermatology, Mae Fah Luang University</div>
+                            </li>
+                            <li>
+                                <div>Certificate of attendance The IMCAS Asia 2010</div>
+                            </li>
+                            <li>
+                                <div>Certificate of completion for the newest Breast surgery and cosmetic surgery at Mega Plastic Surgery Academy center in Korea</div>
+                            </li>
+                            <li>
+                                <div>Certificate of completion for the newest Rhinoplasty and cosmetic surgery at Mega Plastic Surgery Academy center in Korea</div>
+                            </li>
+                            <li>
+                                <div>Certificate of completion for the newest Facial Contouring surgery and cosmetic surgery at Mega Plastic Surgery Academy center in Korea</div>
+                            </li>
+                            <li>
+                                <div>Certificate of completion for the newest Hair Transplantation and cosmetic surgery at Mega Plastic Surgery Academy center in Korea</div>
+                            </li>
+                            </ul>
+                            <ul role="list" class="doctor-education-list">
+                            <li>
+                                <div>Certificate of completion for the newest oculoplastic and cosmetic surgery at Mega Plastic Surgery Academy center in Korea</div>
+                            </li>
+                            <li>
+                                <div>Certificate of completion for newest fat grafting seminar for face at Lilac BLC Clinic in Korea</div>
+                            </li>
+                            <li>
+                                <div>Certificate of completion for newest body-sculpturing surgery at Lilac BLC Clinic in Korea</div>
+                            </li>
+                            <li>
+                                <div>Certificate of facial plastic surgery, augmentation mammaplasty, A2S Thailand</div>
+                            </li>
+                            <li>
+                                <div>Certificate of attendance to the valuable knowledge of ultrasonic Assisted Lipolysis (hand on), Mae Fah Luang University Hospital</div>
+                            </li>
+                            <li>
+                                <div>Certificate of facial plastic surgery, augmentation mammaplasty, Pramongkut Hospital</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctor Intro Section -->
+    <section class="doctor-intro">
+        <div class="w-layout-blockcontainer standard-container w-container">
+        <div class="w-layout-vflex doctor-info-flex">
+            <div class="w-layout-grid doctor-staff-video-grid">
+                <a href="https://www.youtube.com/watch?v=GKiujt_xhV0&t=2s" target="_blank" class="doctor-video-lightbox w-inline-block w-lightbox" aria-label="open lightbox" aria-haspopup="dialog">
+                    <img src="images/doctor-video-cover-5.webp" loading="lazy" alt="Hair Transplant, ศัลยกรรมปลูกผม" class="doctor-video-cover">
+                    <img src="images/icon/yt_icon_rgb.png" loading="lazy" alt="" class="doctor-video-play-icon">
+                </a>
+                <a href="https://www.youtube.com/watch?v=kumDWZz94bw" target="_blank" class="doctor-video-lightbox w-inline-block w-lightbox" aria-label="open lightbox" aria-haspopup="dialog">
+                    <img src="images/doctor-video-cover-6.webp" loading="lazy" alt="FUE Hair Transplant, ปลูกผมที่ไหนดี" class="doctor-video-cover">
+                    <img src="images/icon/yt_icon_rgb.png" loading="lazy" alt="" class="doctor-video-play-icon">
+                </a>
+            </div>
+        </div>
+        </div>
+    </section>
+    
+    <!-- Promo Section -->
+    <section class="page-header" id="contact-form-2">
+        <div class="container">
+            <div class="form-grid-container">
+                <div class="form-image-wrapper">
+                    <img src="images/form-promo-bannner-1125-1.webp" alt="Hair Transplant Promotion" class="form-banner">
+                </div>
+                <div class="form-wrapper">
+                    <form id="submit-contact-form-2" class="custom-contact-form" novalidate>
+                        <h2 class="form-title">บริการฟรี</h2>
+                        
+                        <div class="form-group">
+                            <label for="name">ชื่อ</label>
+                            <input type="text" id="name2" name="name2" placeholder="ชื่อ">
+                            <span class="error-message" id="name2-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastname">นามสกุล</label>
+                            <input type="text" id="lastname2" name="lastname2" placeholder="นามสกุล">
+                            <span class="error-message" id="lastname2-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">เบอร์โทรศัพท์</label>
+                            <input type="tel" id="phone2" name="phone2" placeholder="เบอร์โทรศัพท์">
+                            <span class="error-message" id="phone2-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="line">Line</label>
+                            <input type="text" id="line2" name="line2" placeholder="Line">
+                            <span class="error-message" id="line2-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" id="email2" name="email2" placeholder="Email">
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
                     <h4>THE SKIN CLINIC</h4>
-                    <p>คลินิกปลูกผมถาวร ด้วยเทคนิค Long Hair FUI<br>โดยทีมแพทย์ผู้เชี่ยวชาญระดับโลก</p>
+                    <p>
+                        คลินิกปลูกผมถาวร ด้วยเทคนิค Long Hair FUI<br>
+                        โดยทีมแพทย์ผู้เชี่ยวชาญระดับโลก
+                    </p>
                 </div>
+                
                 <div class="footer-col">
                     <h4>เมนู</h4>
                     <ul>
-                        <li><a href="index.html">หน้าแรก</a></li>
-                        <li><a href="services.html">บริการของเรา</a></li>
-                        <li><a href="doctors.html">ทีมแพทย์</a></li>
-                        <li><a href="blog.html">บทความ</a></li>
+                        <li><a href="https://drtop-hair.com">หน้าแรก</a></li>
+                        <li><a href="index.html#doctors">ทีมแพทย์</a></li>
+                        <li><a href="index.html#long-hair-compare">เช็กลิสต์สำคัญ</a></li>
+                        <li><a href="index.html#clinic-services">เทคนิคปลูกผม</a></li>
+                        <li><a href="index.html#home-review">รีวิว</a></li>
+                        <li><a href="index.html#contact-form">ติดต่อเรา</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-col">
                     <h4>ติดต่อเรา</h4>
                     <ul>
@@ -120,17 +589,86 @@
                         <li>Line: <a href="https://line.me/ti/p/@teamdoctor">@teamdoctor</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-col">
                     <h4>เวลาทำการ</h4>
-                    <p>จันทร์ - เสาร์: 10:00 - 19:00<br>อาทิตย์: ปิดทำการ</p>
+                    <p>
+                        จันทร์ - เสาร์: 10:00 - 19:00<br>
+                        อาทิตย์: ปิดทำการ
+                    </p>
                 </div>
             </div>
+            
             <div class="footer-bottom">
                 <p>&copy; 2025 The Skin Clinic. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Floating CTA Button -->
+    <div id="floating-contact" class="floating-cta">
+        <div class="contact-options" id="contactOptions">
+            <a href="https://lin.ee/ty0gGEN" target="_blank" class="contact-option line">
+                <span class="option-icon">💬</span>
+                <span data-translate="floating_line">Line</span>
+            </a>
+            <a href="https://wa.me/66858333130" target="_blank" class="contact-option whatsapp">
+                <span class="option-icon">📱</span>
+                <span data-translate="floating_whatsapp">WhatsApp</span>
+            </a>
+            <a href="tel:+66858333130" class="contact-option phone">
+                <span class="option-icon">📞</span>
+                <span data-translate="floating_phone">โทร</span>
+            </a>
+            <a href="https://www.facebook.com/Dr.toptheskinclinic/" target="_blank" class="contact-option facebook">
+                <span class="option-icon">📘</span>
+                <span data-translate="floating_facebook">Facebook</span>
+            </a>
+        </div>
+        <button class="floating-btn" id="floatingBtn">
+            <span class="pulse-ring"></span>
+            <span class="floating-icon">💬</span>
+            <span class="floating-text">ปรึกษาฟรี</span>
+        </button>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollTopBtn">
+        <span>↑</span>
+    </button>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M9 12l2 2 4-4"></path>
+                </svg>
+            </div>
+            <h2 class="modal-title" id="modalTitle">ส่งข้อความสำเร็จ!</h2>
+            <p class="modal-message" id="modalMessage">เราจะติดต่อกลับโดยเร็วที่สุด</p>
+            <button class="modal-button" id="modalCloseBtn">ตกลง</button>
+        </div>
+    </div>
+
+    <!-- Error Modal -->
+    <div id="errorModal" class="modal">
+        <div class="modal-content error">
+            <div class="modal-icon error">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="15" y1="9" x2="9" y2="15"></line>
+                    <line x1="9" y1="9" x2="15" y2="15"></line>
+                </svg>
+            </div>
+            <h2 class="modal-title" id="errorModalTitle">เกิดข้อผิดพลาด</h2>
+            <p class="modal-message" id="errorModalMessage">กรุณาลองใหม่อีกครั้ง หรือติดต่อผ่าน Line: @teamdoctor</p>
+            <button class="modal-button error" id="errorModalCloseBtn">ปิด</button>
+        </div>
+    </div>
+
     <script src="script.js"></script>
+    <script src="training-slider.js"></script>
 </body>
 </html>

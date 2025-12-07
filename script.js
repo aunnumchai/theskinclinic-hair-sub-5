@@ -330,7 +330,10 @@ function animateValue(element) {
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Setup mobile menu toggle
-    document.querySelector('.mobile-menu-toggle').addEventListener('click', toggleMobileMenu);
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+    }
     
     // Initialize features
     initFAQ();
@@ -376,6 +379,10 @@ function initHeroSlider() {
     const dots = document.querySelectorAll('.slider-dots .dot');
     const prevBtn = document.querySelector('.slider-control.prev');
     const nextBtn = document.querySelector('.slider-control.next');
+    
+    // Check if slider elements exist
+    if (!slides.length) return;
+    
     let currentSlide = 0;
     let slideInterval;
     
@@ -383,17 +390,21 @@ function initHeroSlider() {
     function showSlide(index) {
         // Remove active class from all slides and dots
         slides.forEach(slide => slide.classList.remove('active'));
-        dots.forEach(dot => {
-            dot.classList.remove('active', 'w-active');
-            dot.setAttribute('aria-pressed', 'false');
-            dot.setAttribute('tabindex', '-1');
-        });
+        if (dots.length) {
+            dots.forEach(dot => {
+                dot.classList.remove('active', 'w-active');
+                dot.setAttribute('aria-pressed', 'false');
+                dot.setAttribute('tabindex', '-1');
+            });
+        }
         
         // Add active class to current slide and dot
         slides[index].classList.add('active');
-        dots[index].classList.add('active', 'w-active');
-        dots[index].setAttribute('aria-pressed', 'true');
-        dots[index].setAttribute('tabindex', '0');
+        if (dots[index]) {
+            dots[index].classList.add('active', 'w-active');
+            dots[index].setAttribute('aria-pressed', 'true');
+            dots[index].setAttribute('tabindex', '0');
+        }
     }
     
     // Next slide
@@ -418,56 +429,66 @@ function initHeroSlider() {
     }
     
     // Event listeners for navigation buttons
-    nextBtn.addEventListener('click', () => {
-        stopAutoPlay();
-        nextSlide();
-        startAutoPlay();
-    });
-    
-    prevBtn.addEventListener('click', () => {
-        stopAutoPlay();
-        prevSlide();
-        startAutoPlay();
-    });
-    
-    // Event listeners for dots
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
             stopAutoPlay();
-            currentSlide = index;
-            showSlide(currentSlide);
+            nextSlide();
             startAutoPlay();
         });
-    });
+    }
+    
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            stopAutoPlay();
+            prevSlide();
+            startAutoPlay();
+        });
+    }
+    
+    // Event listeners for dots
+    if (dots.length) {
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                stopAutoPlay();
+                currentSlide = index;
+                showSlide(currentSlide);
+                startAutoPlay();
+            });
+        });
+    }
     
     // Pause on hover
     const heroSlider = document.querySelector('.hero-slider');
-    heroSlider.addEventListener('mouseenter', stopAutoPlay);
-    heroSlider.addEventListener('mouseleave', startAutoPlay);
+    if (heroSlider) {
+        heroSlider.addEventListener('mouseenter', stopAutoPlay);
+        heroSlider.addEventListener('mouseleave', startAutoPlay);
+    }
     
     // Touch support for mobile
-    let touchStartX = 0;
-    let touchEndX = 0;
-    
-    heroSlider.addEventListener('touchstart', (e) => {
-        touchStartX = e.changedTouches[0].screenX;
-        stopAutoPlay();
-    });
-    
-    heroSlider.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].screenX;
-        handleSwipe();
-        startAutoPlay();
-    });
-    
-    function handleSwipe() {
-        if (touchEndX < touchStartX - 50) {
-            // Swipe left
-            nextSlide();
-        }
-        if (touchEndX > touchStartX + 50) {
-            // Swipe right
-            prevSlide();
+    if (heroSlider) {
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        heroSlider.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            stopAutoPlay();
+        });
+        
+        heroSlider.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+            startAutoPlay();
+        });
+        
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                // Swipe left
+                nextSlide();
+            }
+            if (touchEndX > touchStartX + 50) {
+                // Swipe right
+                prevSlide();
+            }
         }
     }
     
@@ -800,11 +821,20 @@ function initLightbox() {
     const modal = document.getElementById('lightbox-modal');
     const modalImg = document.getElementById('lightbox-image');
     const reviewItems = document.querySelectorAll('.review-carousel');
+    const certificateLinks = document.querySelectorAll('.doctor-certificate-lightbox');
     const closeBtn = document.querySelector('.lightbox-close');
     
-    if (!modal || !modalImg) return;
+    console.log('Lightbox initialized');
+    console.log('Modal:', modal);
+    console.log('Modal Image:', modalImg);
+    console.log('Certificate links found:', certificateLinks.length);
     
-    // Open lightbox on image click
+    if (!modal || !modalImg) {
+        console.log('Modal or modalImg not found');
+        return;
+    }
+    
+    // Open lightbox on review image click
     reviewItems.forEach(item => {
         item.addEventListener('click', function() {
             const imgSrc = this.getAttribute('data-image');
@@ -813,24 +843,48 @@ function initLightbox() {
         });
     });
     
+    // Open lightbox on certificate image click - Using direct approach
+    certificateLinks.forEach((link, index) => {
+        console.log('Setting up certificate link', index, link);
+        link.onclick = function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Certificate link clicked!', index);
+            const img = this.querySelector('img');
+            if (img) {
+                const imgSrc = img.getAttribute('src');
+                console.log('Opening image:', imgSrc);
+                modal.style.display = 'block';
+                modalImg.src = imgSrc;
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            } else {
+                console.log('No image found in link');
+            }
+            return false;
+        };
+    });
+    
     // Close lightbox
     if (closeBtn) {
-        closeBtn.addEventListener('click', function() {
+        closeBtn.onclick = function() {
             modal.style.display = 'none';
-        });
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        };
     }
     
     // Close on background click
-    modal.addEventListener('click', function(e) {
+    modal.onclick = function(e) {
         if (e.target === modal) {
             modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restore scrolling
         }
-    });
+    };
     
     // Close on ESC key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && modal.style.display === 'block') {
             modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restore scrolling
         }
     });
 }
